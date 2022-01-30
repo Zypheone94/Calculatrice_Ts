@@ -5,7 +5,7 @@
 
 #numbers{
     height: 75vh;
-    width: 65%;
+    width: 60%;
     background-color: grey;
 
     display: flex;
@@ -37,6 +37,51 @@
 
 #calc{
     height: 75vh;
-    width: 35%;
+    width: 40%;
     background-color: beige;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 0 2%;
+}
+
+#calc_operators{
+    display: flex;
+}
+
+.calc_operator{
+    width: 25%;
+    height: 30px;
+
+    background-color: white;
+    margin: 0 1%;
+
+    border: 1px solid beige;
+    border-radius: 0 20px 0 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#calc_list{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+
+    color: white;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#calc_result{
+    width: 100%;
+    height: 50px;
+    background-color: cadetblue;
 }
