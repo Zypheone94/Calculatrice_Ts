@@ -40,7 +40,7 @@ function calcule() {
     }
 }
 function addToCalc(value) {
-    if (value == "+" || value == "-" || value == "*" || value == "/") {
+    if ((value == "+" || value == "-" || value == "*" || value == "/") && operator == undefined) {
         operator = value;
         console.log(operator);
         if (num2 == undefined) {
@@ -51,12 +51,22 @@ function addToCalc(value) {
         }
     }
     else {
-        if (num1 == undefined) {
-            num1 = value;
+        if (operator == undefined) {
+            if (num1 == undefined) {
+                num1 = value;
+            }
+            else {
+                num1 += value;
+            }
             calc_list.innerHTML = num1;
         }
-        else if (num1 != undefined && num2 == undefined) {
-            num2 = value;
+        else {
+            if (num2 == undefined) {
+                num2 = value;
+            }
+            else {
+                num2 += value;
+            }
             if (operator == undefined) {
                 null;
             }
@@ -64,9 +74,16 @@ function addToCalc(value) {
                 calc_list.innerHTML = num1 + operator + num2;
             }
         }
-        else {
-            null;
-        }
+        // if(num1 == undefined){ 
+        //     num1 = value 
+        //     calc_list.innerHTML = num1
+        // }
+        // else if (num1 != undefined && num2 == undefined) { 
+        //     num2 = value
+        //     if ( operator == undefined) { null }
+        //     else { calc_list.innerHTML = num1 + operator + num2 }
+        // }
+        // else { null }
     }
     calcule();
 }
