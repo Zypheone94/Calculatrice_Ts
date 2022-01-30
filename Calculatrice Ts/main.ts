@@ -14,7 +14,9 @@ tils.forEach(item => {
 operators.forEach(item => {
     item.addEventListener('click', function(){
         let operatorType = item.getAttribute("operatorType")
-        addToCalc(operatorType)
+        if(operator == undefined){ addToCalc(operatorType) }
+        else { null }
+        
     })
 })
 
@@ -58,16 +60,6 @@ function addToCalc (value : string) : void{
             if ( operator == undefined) { null }
             else { calc_list.innerHTML = num1 + operator + num2 }
         }
-        // if(num1 == undefined){ 
-        //     num1 = value 
-        //     calc_list.innerHTML = num1
-        // }
-        // else if (num1 != undefined && num2 == undefined) { 
-        //     num2 = value
-        //     if ( operator == undefined) { null }
-        //     else { calc_list.innerHTML = num1 + operator + num2 }
-        // }
-        // else { null }
     }
     calcule()
 }
