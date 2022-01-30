@@ -1,3 +1,42 @@
 #container {
-    
+    display: flex;
+    margin: 0 15%;
+}
+
+#numbers{
+    height: 75vh;
+    width: 65%;
+    background-color: grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.numbers_tils{
+    width: 30%;
+    height: 10vh;
+    background-color: white;
+    margin: 0 1%;
+
+    border: 1px solid beige;
+    border-radius: 0 20px 0 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+#t0{
+    width: 95%
+}
+
+#calc{
+    height: 75vh;
+    width: 35%;
+    background-color: beige;
 }
